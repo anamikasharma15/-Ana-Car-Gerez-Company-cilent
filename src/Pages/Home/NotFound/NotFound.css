@@ -1,0 +1,18 @@
+.error-bg{
+    /* background: url(../../images/wall_behind_the_door.jpg); */
+    background-size: cover;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: 55px;
+}
+
+.error-msg{
+    font-size: 150px;
+    color:rgb(77, 41, 41);
+}
+.error-msg2{
+    color:blue;
+    font-size: 100px;
+    font-weight: 300;
+}
