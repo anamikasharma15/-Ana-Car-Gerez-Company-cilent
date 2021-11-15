@@ -3,7 +3,7 @@ import  "./AddProducts.css";
 import { useForm } from "react-hook-form";
 import useFirebase from "../../hooks/useFirebase";
 
-const AddServices = () => {
+const AddProducts = () => {
   const { user } = useFirebase();
   const {
     register,
@@ -13,7 +13,7 @@ const AddServices = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addProducts", {
+    fetch("https://calm-sands-82191.herokuapp.com/addProducts", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -83,4 +83,4 @@ const AddServices = () => {
   );
 };
 
-export default AddServices;
+export default AddProducts;

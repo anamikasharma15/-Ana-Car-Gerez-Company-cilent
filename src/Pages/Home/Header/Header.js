@@ -34,7 +34,7 @@ const Header = () => {
                         user?.email ?
                            <div className='d-flex align-items-center justify-content-center'>
                               <div>
-                                 <h5> Log in as : {user.displayName}</h5>
+                                 <h5> Log in as : {user.email}</h5>
                               </div>
                               <div className='ms-2'>
                                  <button className='btn btn-warning' onClick={logOut}>Log Out</button>

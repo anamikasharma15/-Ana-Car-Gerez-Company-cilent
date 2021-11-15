@@ -156,6 +156,7 @@ const Register = () => {
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                      <Form.Label>Email address</Form.Label>
                      <Form.Control required onBlur={emailChange} type="email" placeholder="Enter email" />
+                     
                      <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                      </Form.Text>

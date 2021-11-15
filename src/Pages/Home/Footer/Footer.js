@@ -12,7 +12,7 @@ import {
   faPhone,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faGooglePlusG, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+// import { faFacebookF, faGooglePlusG, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -50,7 +50,7 @@ const Footer = () => {
               </ul>
             {/* </Col> */}
             {/* <Col md={6}> */}
-            <div className="footer-social-link text-center"> 
+            {/* <div className="footer-social-link text-center"> 
                                 <h3>Follow us</h3>
                                <ul>
                                     <li>
@@ -79,7 +79,7 @@ const Footer = () => {
                                </ul>
                              </div>
                      {/* </Col> */}
-            </Col>
+            </Col> 
                 
             <Col md={2}>
               <ul className="list-unstyled footer-link">

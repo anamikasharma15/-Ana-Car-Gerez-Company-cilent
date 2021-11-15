@@ -5,6 +5,7 @@ import AboutUs from '../AboutUs/AboutUs';
 // import Footer from '../Footer/Footer';
 import Products from '../Products/Products';
 import { Link } from 'react-router-dom';
+import Reviewers from '../../../Reviewers/Reviewers';
 // import About from '../components/Home/About/About';
 // import Contact from '../components/Home/Contact/Contact';
 // import Footer from '../components/Home/Footer/Footer';
@@ -17,7 +18,7 @@ const Home = () => {
     // const services = Products  ()
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/addProducts")
+        fetch("https://calm-sands-82191.herokuapp.com/addProducts")
           .then((res) => res.json())
           .then((data) => setServices(data));
       }, []);
@@ -37,7 +38,7 @@ const Home = () => {
         <div className="row container"> 
           {services.slice(0,6).map((pd, index) => (
             <div className="col-md-6 col-lg-4">
-              <div className="service p-3 border border m-2" style={{ width: '', height:'550px'}} >
+              <div className="service p-3 border border m-2" style={{ width: '', height:'600px'}} >
                 <div className="service-img ">
                   {/* <img className="w-50" src={pd?.image} alt="" /> */}
                   <img className="img-fluid" src={pd.img} alt="" />
@@ -69,8 +70,9 @@ const Home = () => {
             }
             {/* </div> 
           </div>  */} 
+        <Reviewers></Reviewers>
        <Contact></Contact>
-        {/* <Services></Services> */}
+    
         {/* <Review></Review> */}
         {/* <Footers></Footers> */}
          {/* <Footer></Footer> */}

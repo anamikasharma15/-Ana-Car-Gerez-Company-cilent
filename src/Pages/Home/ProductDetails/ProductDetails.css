@@ -1,0 +1,14 @@
+.cart-services form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .cart-services form input,
+  textarea {
+    width: 40%;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+  

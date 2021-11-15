@@ -44,6 +44,7 @@ const useFirebase = () => {
          .then(result => {
             console.log(result.user);
             handleUserInfoRegister(result.user.email);
+            // handleUserInfoRegister(result.user.email,user.displayName,'PUT');
             updateName(displayName);
             setUser(result.user)
             setLoading(true)
@@ -57,7 +58,7 @@ const useFirebase = () => {
    };
 
    const handleUserInfoRegister = (email) => {
-    fetch("http://localhost:5000/addUserInfo", {
+    fetch("https://calm-sands-82191.herokuapp.com/addUserInfo", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),

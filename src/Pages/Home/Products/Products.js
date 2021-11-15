@@ -6,7 +6,7 @@ const Products = () => {
 //   const {_id,name,img,description} = props.detail;
 
   useEffect(() => {
-    fetch("http://localhost:5000/addProducts")
+    fetch("https://calm-sands-82191.herokuapp.com/addProducts")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -19,14 +19,14 @@ const Products = () => {
         <div className="row container"> 
           {services?.map((pd, index) => (
             <div className="col-md-6 col-lg-4">
-              <div className="service p-3 border border m-2" style={{ width: '', height:'550px'}} >
+              <div className="service p-3 border border m-2" style={{ width: '', height:'600px'}} >
                 <div className="service-img ">
                   {/* <img className="w-50" src={pd?.image} alt="" /> */}
                   <img className="img-fluid" src={pd.img} alt="" />
                 </div>
                 <h1>{pd.name}</h1>
                 <p>{pd.description}</p>
-                <h3>Price:{pd.price}</h3>
+                <h3>Price:${pd.price}</h3>
                 <Link to={`/services/${pd._id}`}>
                   {" "}
                   <button className="btn btn-success">Order Now</button>

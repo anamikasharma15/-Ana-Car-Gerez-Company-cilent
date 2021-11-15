@@ -6,7 +6,7 @@ const Review = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const { user } = useFirebase();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://calm-sands-82191.herokuapp.com/addReview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -29,6 +29,12 @@ const Review = () => {
           {...register("name", { required: true })}
         />
         <br/>
+        <input className='form-control mb-2 '
+            {...register('img')}
+            type='text'
+             placeholder='image Url' />
+
+            <br/>
         <input
           className="p-2 m-2 w-100 input-field"
           name="email"
