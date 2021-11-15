@@ -62,9 +62,9 @@ function App() {
           {/* <Route exact path="/manageOrders">
             <MangeOrder></MangeOrder>
           </Route> */}
-           <Route path="/dashboard">
+           <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
           {/* <Route exact path="/addService">
             <AddServices></AddServices>
           </Route> */}
